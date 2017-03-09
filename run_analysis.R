@@ -53,4 +53,4 @@ finaldatamean = dcast(finaldatamelted,subject+activity ~ variable, mean)
 # add in the labels again because they seem to disappear during melting and casting
 finaldatamean$activity = as.factor(finaldatamean$activity)
 levels(finaldatamean$activity) <- activitylabels$V2
-write.table(finaldatamean,"UCIHARFinalDataTidy.txt")
+write.table(finaldatamean,"UCIHARFinalDataTidy.txt", row.names = FALSE)

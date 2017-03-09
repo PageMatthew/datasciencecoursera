@@ -5,7 +5,7 @@ The purpose of this project is to create two tidy datasets based on the dataset 
 **Use:**
 There is only one script involved with this dataset.  The filename is run_analysis.R.  For it to work properly, you will need to download the original dataset from this location. 
 ````https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip```` and unzip it into a directory called UCI HAR Dataset.  The script should be placed in the same directory as the UCI HAR Dataset directory.  Open R, set your working directory to the directory that UCI HAR Dataset and the run_analysis.R script is located and then run the script.  It will generate a datafile called UCIHARFinalDataTidy.txt.  To load this file into R type the command
-````df <- read.table("UCIHARFinalDataTidy.txt")````
+````df <- read.table("UCIHARFinalDataTidy.txt", headers = TRUE)````
 
 **Dataset:**
 Modifications to the original dataset are described in the CodeBook.md file in this github repository.

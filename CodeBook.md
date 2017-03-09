@@ -15,24 +15,28 @@ There are two folders with the data we need, test and train.  Each of these fold
 
 **Data Load and Transformation**
 All of the data files included in this data set are fixed format text files.
-1. Load the features.txt file to be used as column headers
-1. Load the testdata file
-1. Load the test subject data
-1. Load the test activity data
-1. Remove the unneeded columns using a regular expression that looks for "-std()" or "-mean()"
-1. Merge the test data, the subject column and the activity column
+1. Test Data
+    1. Load the features.txt file to be used as column headers
+    1. Load the testdata file
+    1. Load the test subject data
+    1. Load the test activity data
+    1. Remove the unneeded columns using a regular expression that looks for "-std()" or "-mean()"
+    1. Merge the test data, the subject column and the activity column
+1. Train data
+    1. Load the traindata file
+    1. Load the train subject data
+    1. Load the train activity data
+    1. Remove the unneeded columns using a regular expression that looks for "-std()" or "-mean()"
+    1. Merge the train data, the subject column and the activity column
+1. Process the combined data file and create the first dataset
+    1. Combine the test data and train data into one dataset
+    1. Load the activities dataset into memory
+    1. Change the labels of the coded activity values to be the text label
+    1. This completes creation of the first dataset.
+1. Create the second data set and write to a file
+    1. To create the second we take the dataset we just created and take the mean of each feature for a specific activity for a specific subject and put this data into a table.
+    1. The Activity labels are reapplied
+    1. The final output is written to the file UCIHARFinalDataTidy.txt
 
-1. Load the traindata file
-1. Load the train subject data
-1. Load the train activity data
-1. Remove the unneeded columns using a regular expression that looks for "-std()" or "-mean()"
-1. Merge the train data, the subject column and the activity column
-
-1. Combine the test data and train data into one dataset
-1. Load the activities dataset into memory
-1. Change the labels of the coded activity values to be the text label
-1. This completes creation of the first dataset.
-1. To create the second we take the dataset we just created and take the mean of each feature for a specific activity for a specific subject and put this data into a table.
-1. The Activity labels are reapplied
-1. The final output is written to the file UCIHARFinalDataTidy.txt
-
+**Output Format**
+There are 181 rows and 69 columns in the output file.  The first row is column titles and the first column is row titles.  The dataset itself is made up of first, the encoded subject ID followed by the descriptor for the activity being performed.  The following 66 columns are the actual data.  All are numeric and are between -1 and 1.  Each value is separated by a space.  To load this data file into R, use this command: ````read.table("UCIHARFinalDataTidy.txt", header = TRUE)````
