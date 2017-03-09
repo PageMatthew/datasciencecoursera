@@ -4,9 +4,9 @@
 The raw data for this assignment is based off of the UCI HAR dataset of Accelerometer data for 30 people with a Samsung Galaxy S smartphone strapped near their waist.
 
 The data files were distributed as a zip file that can be found here:
-``` https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip ```
+```` https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip ````
 The CodeBook describing this data can be found here:
-``` http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones ```
+```` http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones ````
 
 The raw data included many observations that were excluded from consideration.  The only fields we were interested in were the average values (field descriptor ends in -mean()) and the standard deviation values (field descriptor ends in -std()).  The raw values in each of the Inertial folders was also discarded because it didn't have anything to do with the mean or standard deviation.
 
